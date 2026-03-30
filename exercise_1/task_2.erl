@@ -12,8 +12,6 @@ is_equal(F1, F2, Precision) when F1 > 0, F2 > 0, F1 > F2, F1 - F2 =< Precision -
 is_equal(F1, F2, Precision) when F1 > 0, F2 > 0, F2 > F1, F2 - F1 =< Precision -> true;
 is_equal(F1, F2, Precision) when F1 /= F2 -> false.
 
-%Вопрос многовато ли образцов, может можно было красивее оформить используя case, 
-
 is_equal_test() ->
     ?assertEqual(true, is_equal(3.5, 3.5, 0.01)),
     ?assertEqual(true, is_equal(3.51, 3.51, 0.01)),

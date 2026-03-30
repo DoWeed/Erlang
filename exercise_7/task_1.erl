@@ -9,9 +9,6 @@ parse(Str, Data) when is_binary(Str) ->
         binary:replace(Acc, key_to_template(K), parse_params(V)) end,
     maps:fold(Fun, Str, Data).
 
-
-%% Надо использовать сплит и вытащить из строки "{{ }}" и в них искать параметр и его менять предварительно распарсить на нужный тип
-
 key_to_template(K) ->
     iolist_to_binary(io_lib:format("{{~s}}", [erlang:binary_to_list(K)])). 
 

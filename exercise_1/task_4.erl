@@ -8,8 +8,6 @@
 pack_floats(F1, F2, F3) -> <<F1:64/float, F2/float, F3/float>>.
 pack_floats(F1, F2, F3) -> <<F1:32/float, F2/float, F3/float>>.
 
-%Не до конца понял как это работает, нужны разъяснения
-
 pack_floats_test() ->
     ?assertEqual(<<63,240,0,0,0,0,0,0,
                    64,4,0,0,0,0,0,0,

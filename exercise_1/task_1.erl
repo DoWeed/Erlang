@@ -7,7 +7,7 @@
 
 %% Check is Val in range [From, To], both edges included
 is_in_range(Val, Left, Right) when Val >= Left, Val =< Right -> true;
-is_in_range(Val, Left, _Right) when Val < Left -> false; %%Вопрос про неиспользуемые переменные Left Right
+is_in_range(Val, Left, _Right) when Val < Left -> false;
 is_in_range(Val, _Left, Right) when Val > Right -> false.
 
 is_in_range_test() ->
